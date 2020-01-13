@@ -8,14 +8,24 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
+@available(iOS 13.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // background play
+        let session = AVAudioSession.sharedInstance()
+        do{
+            try session.setActive(true)
+            try session.setCategory(.playback, mode: .default,  options: .defaultToSpeaker)
+        } catch{
+            print(error.localizedDescription)
+        }
+        
         return true
     }
 

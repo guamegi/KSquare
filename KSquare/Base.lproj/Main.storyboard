@@ -1,24 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V4X-uy-901">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--K Square-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KSquare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5S-5y-0LV">
+                                <rect key="frame" x="40" y="138" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="MUu-sW-vYH"/>
+                                    <constraint firstAttribute="width" constant="130" id="wsq-Kk-V0f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                <state key="normal" title="집중">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uiA-6r-Qqr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldd-BT-1lX">
+                                <rect key="frame" x="40" y="318" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="YLQ-mz-thO"/>
+                                    <constraint firstAttribute="width" constant="130" id="a7Z-3k-Ef0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                <state key="normal" title="학습">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZSz-j9-Jt7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLo-nz-m2T">
+                                <rect key="frame" x="244" y="138" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="0yh-b0-S6J"/>
+                                    <constraint firstAttribute="width" constant="130" id="Bed-3R-7a7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                <state key="normal" title="휴식">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ses-21-NBM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6W2-bQ-S0c">
+                                <rect key="frame" x="244" y="318" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="LqJ-ny-ByT"/>
+                                    <constraint firstAttribute="height" constant="130" id="mD5-2x-p2f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                <state key="normal" title="활력1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zGJ-eC-yq9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZK-fZ-0RS">
+                                <rect key="frame" x="244" y="498" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="gcc-Z1-Rz7"/>
+                                    <constraint firstAttribute="height" constant="130" id="wr7-5n-pV3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                <state key="normal" title="수면">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4sv-3d-Lx4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4u-8T-fwJ">
+                                <rect key="frame" x="40" y="498" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="jDo-6K-BFc"/>
+                                    <constraint firstAttribute="height" constant="130" id="xD0-Vh-Ig1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                <state key="normal" title="활력2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h4D-LO-gKa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6W2-bQ-S0c" firstAttribute="top" secondItem="cLo-nz-m2T" secondAttribute="bottom" constant="50" id="2ac-6J-VsZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cLo-nz-m2T" secondAttribute="trailing" constant="40" id="5LF-e1-TEJ"/>
+                            <constraint firstItem="cLo-nz-m2T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="70y-ev-fsg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oZK-fZ-0RS" secondAttribute="trailing" constant="40" id="8eb-0P-alD"/>
+                            <constraint firstItem="M4u-8T-fwJ" firstAttribute="top" secondItem="Ldd-BT-1lX" secondAttribute="bottom" constant="50" id="FCV-NW-pkH"/>
+                            <constraint firstItem="oZK-fZ-0RS" firstAttribute="top" secondItem="6W2-bQ-S0c" secondAttribute="bottom" constant="50" id="M4Z-uo-WzZ"/>
+                            <constraint firstItem="s5S-5y-0LV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="T0Y-nM-1ts"/>
+                            <constraint firstItem="Ldd-BT-1lX" firstAttribute="top" secondItem="s5S-5y-0LV" secondAttribute="bottom" constant="50" id="TAO-NK-LxO"/>
+                            <constraint firstItem="s5S-5y-0LV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="hJz-u8-btZ"/>
+                            <constraint firstItem="M4u-8T-fwJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="sEc-hp-scK"/>
+                            <constraint firstItem="Ldd-BT-1lX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="vdo-Xt-7fa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6W2-bQ-S0c" secondAttribute="trailing" constant="40" id="yWo-Xy-sC2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="K Square" id="MsR-Pl-yXO"/>
+                    <connections>
+                        <outlet property="button1" destination="s5S-5y-0LV" id="VGj-LB-ftT"/>
+                        <outlet property="button2" destination="cLo-nz-m2T" id="6Ao-sF-qKp"/>
+                        <outlet property="button3" destination="Ldd-BT-1lX" id="2ui-XW-XrD"/>
+                        <outlet property="button4" destination="6W2-bQ-S0c" id="cdf-JX-B6q"/>
+                        <outlet property="button5" destination="M4u-8T-fwJ" id="qbg-6e-jAq"/>
+                        <outlet property="button6" destination="oZK-fZ-0RS" id="vdD-I3-9yO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2862.3188405797105" y="128.57142857142856"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="XBT-Yf-FAC">
+            <objects>
+                <viewController id="Oij-di-YPx" customClass="TimerViewController" customModule="KSquare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QIt-3o-B5J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90c-BR-Qa6">
+                                <rect key="frame" x="0.0" y="322" width="414" height="216"/>
+                                <locale key="locale" localeIdentifier="ko"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpJ-yB-fQf">
+                                <rect key="frame" x="112" y="188" width="190" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88N-yZ-UMD">
+                                <rect key="frame" x="80" y="618" width="80" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="owD-tY-Bpt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPW-qQ-lAF">
+                                <rect key="frame" x="254" y="618" width="80" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="dAL-oV-mXW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XpJ-yB-fQf" firstAttribute="top" secondItem="n2R-rm-Pb2" secondAttribute="top" constant="100" id="6DZ-wJ-dJg"/>
+                            <constraint firstItem="88N-yZ-UMD" firstAttribute="leading" secondItem="n2R-rm-Pb2" secondAttribute="leading" constant="80" id="B7t-Ce-Pp0"/>
+                            <constraint firstItem="XpJ-yB-fQf" firstAttribute="centerX" secondItem="QIt-3o-B5J" secondAttribute="centerX" id="DBV-on-hSg"/>
+                            <constraint firstItem="90c-BR-Qa6" firstAttribute="trailing" secondItem="n2R-rm-Pb2" secondAttribute="trailing" id="FG0-zZ-gaG"/>
+                            <constraint firstItem="FPW-qQ-lAF" firstAttribute="top" secondItem="88N-yZ-UMD" secondAttribute="top" id="bHe-79-KGL"/>
+                            <constraint firstItem="90c-BR-Qa6" firstAttribute="top" secondItem="XpJ-yB-fQf" secondAttribute="bottom" constant="80" id="cA2-qh-ei0"/>
+                            <constraint firstItem="88N-yZ-UMD" firstAttribute="top" secondItem="90c-BR-Qa6" secondAttribute="bottom" constant="80" id="q15-f6-t8G"/>
+                            <constraint firstItem="n2R-rm-Pb2" firstAttribute="trailing" secondItem="FPW-qQ-lAF" secondAttribute="trailing" constant="80" id="rG8-xR-IsK"/>
+                            <constraint firstItem="90c-BR-Qa6" firstAttribute="leading" secondItem="n2R-rm-Pb2" secondAttribute="leading" id="x29-ck-vBE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n2R-rm-Pb2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Timer" id="D0p-yl-sAT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5R-6j-bot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2860.8695652173915" y="780.80357142857144"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="T9b-2T-4fj">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="V4X-uy-901" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UiL-l1-m0h">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="XUy-AO-OH6" kind="relationship" relationship="viewControllers" id="G2s-u0-nbi"/>
+                        <segue destination="SBQ-JF-JJ8" kind="relationship" relationship="viewControllers" id="zb8-bi-JH1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J0U-3w-ub0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="128.57142857142856"/>
+        </scene>
+        <!--Play-->
+        <scene sceneID="GTS-4o-wDr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XUy-AO-OH6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Play" image="play" catalog="system" id="vh0-i6-yzI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7aK-dE-keJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Lho-Wx-RI1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAK-Eh-PDt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1952.1739130434785" y="128.57142857142856"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="giE-Me-IDJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SBQ-JF-JJ8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="CbY-4r-zqo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yvn-uC-Sq6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Oij-di-YPx" kind="relationship" relationship="rootViewController" id="J7m-yy-S5Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxQ-kL-fGr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1950.7246376811595" y="780.80357142857144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play" catalog="system" width="60" height="64"/>
+        <image name="timer" catalog="system" width="64" height="60"/>
+    </resources>
 </document>

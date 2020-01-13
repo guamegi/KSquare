@@ -14,6 +14,7 @@
 		A6858B2423C77ED800DB427C /* KSquare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6858B2223C77ED800DB427C /* KSquare.xcdatamodeld */; };
 		A6858B2623C77EDB00DB427C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6858B2523C77EDB00DB427C /* Assets.xcassets */; };
 		A6858B2923C77EDB00DB427C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6858B2723C77EDB00DB427C /* LaunchScreen.storyboard */; };
+		A6858B3123CCA61900DB427C /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6858B3023CCA61900DB427C /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A6858B2523C77EDB00DB427C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6858B2823C77EDB00DB427C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6858B2A23C77EDB00DB427C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6858B3023CCA61900DB427C /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				A6858B2723C77EDB00DB427C /* LaunchScreen.storyboard */,
 				A6858B2A23C77EDB00DB427C /* Info.plist */,
 				A6858B2223C77ED800DB427C /* KSquare.xcdatamodeld */,
+				A6858B3023CCA61900DB427C /* TimerViewController.swift */,
 			);
 			path = KSquare;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6858B3123CCA61900DB427C /* TimerViewController.swift in Sources */,
 				A6858B2423C77ED800DB427C /* KSquare.xcdatamodeld in Sources */,
 				A6858B1E23C77ED800DB427C /* ViewController.swift in Sources */,
 				A6858B1A23C77ED800DB427C /* AppDelegate.swift in Sources */,
@@ -291,6 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 543BQT7Y4W;
 				INFOPLIST_FILE = KSquare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 543BQT7Y4W;
 				INFOPLIST_FILE = KSquare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
