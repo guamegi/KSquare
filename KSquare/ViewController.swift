@@ -21,6 +21,20 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var button5: UIButton!
     @IBOutlet weak var button6: UIButton!
     
+    @IBOutlet weak var line1: UIView!
+    @IBOutlet weak var line2: UIView!
+    @IBOutlet weak var line3: UIView!
+    @IBOutlet weak var line4: UIView!
+    @IBOutlet weak var line5: UIView!
+    @IBOutlet weak var line6: UIView!
+    
+    @IBOutlet weak var SubTitle1: UILabel!
+    @IBOutlet weak var SubTitle2: UILabel!
+    @IBOutlet weak var SubTitle3: UILabel!
+    @IBOutlet weak var SubTitle4: UILabel!
+    @IBOutlet weak var SubTitle5: UILabel!
+    @IBOutlet weak var SubTitle6: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,34 +43,49 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         button1.backgroundColor = .clear
         button1.layer.cornerRadius = button1.frame.height / 2
         button1.layer.borderWidth = 3
-        button1.layer.borderColor = UIColor.gray.cgColor
+        button1.layer.borderColor = UIColor.cyan.cgColor
         
         button2.backgroundColor = .clear
         button2.layer.cornerRadius = button1.frame.height / 2
         button2.layer.borderWidth = 3
-        button2.layer.borderColor = UIColor.gray.cgColor
+        button2.layer.borderColor = UIColor.orange.cgColor
         
         button3.backgroundColor = .clear
         button3.layer.cornerRadius = button1.frame.height / 2
         button3.layer.borderWidth = 3
-        button3.layer.borderColor = UIColor.gray.cgColor
+        button3.layer.borderColor = UIColor.magenta.cgColor
         
         button4.backgroundColor = .clear
         button4.layer.cornerRadius = button1.frame.height / 2
         button4.layer.borderWidth = 3
-        button4.layer.borderColor = UIColor.gray.cgColor
+        button4.layer.borderColor = UIColor.green.cgColor
         
         button5.backgroundColor = .clear
         button5.layer.cornerRadius = button1.frame.height / 2
         button5.layer.borderWidth = 3
-        button5.layer.borderColor = UIColor.gray.cgColor
+        button5.layer.borderColor = UIColor.blue.cgColor
         
         button6.backgroundColor = .clear
         button6.layer.cornerRadius = button1.frame.height / 2
         button6.layer.borderWidth = 3
-        button6.layer.borderColor = UIColor.gray.cgColor
+        button6.layer.borderColor = UIColor.purple.cgColor
         
+        // line
+        line1.backgroundColor = UIColor.cyan
+        line2.backgroundColor = UIColor.orange
+        line3.backgroundColor = UIColor.magenta
+        line4.backgroundColor = UIColor.green
+        line5.backgroundColor = UIColor.blue
+        line6.backgroundColor = UIColor.purple
         
+        // SubTitle
+        SubTitle1.textColor = UIColor.cyan
+        SubTitle2.textColor = UIColor.orange
+        SubTitle3.textColor = UIColor.magenta
+        SubTitle4.textColor = UIColor.green
+        SubTitle5.textColor = UIColor.blue
+        SubTitle6.textColor = UIColor.purple
+
     }
 
     @IBAction func button1(_ sender: UIButton) {
@@ -77,11 +106,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         if sender.isSelected {
             self.player.numberOfLoops = -1
-            button1.layer.borderColor = UIColor.blue.cgColor
             self.player?.play()
         } else {
-            button1.layer.borderColor = UIColor.gray.cgColor
             self.player?.pause()
+        }
+        
+        // player 가 재생 중이면, 다른 버튼 isSelected를 false로 변경
+        if self.player.isPlaying {
+            button2.isSelected = false
+            button3.isSelected = false
+            button4.isSelected = false
+            button5.isSelected = false
+            button6.isSelected = false
         }
     }
     
@@ -102,11 +138,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         if sender.isSelected {
             self.player.numberOfLoops = -1
-            button2.layer.borderColor = UIColor.yellow.cgColor
             self.player?.play()
         } else {
-            button2.layer.borderColor = UIColor.gray.cgColor
             self.player?.pause()
+        }
+        
+        // player 가 재생 중이면, 다른 버튼 isSelected를 false로 변경
+        if self.player.isPlaying {
+            button1.isSelected = false
+            button3.isSelected = false
+            button4.isSelected = false
+            button5.isSelected = false
+            button6.isSelected = false
         }
     }
     
@@ -127,11 +170,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         if sender.isSelected {
             self.player.numberOfLoops = -1
-            button3.layer.borderColor = UIColor.red.cgColor
             self.player?.play()
         } else {
-            button3.layer.borderColor = UIColor.gray.cgColor
             self.player?.pause()
+        }
+        
+        // player 가 재생 중이면, 다른 버튼 isSelected를 false로 변경
+        if self.player.isPlaying {
+            button1.isSelected = false
+            button2.isSelected = false
+            button4.isSelected = false
+            button5.isSelected = false
+            button6.isSelected = false
         }
     }
     
@@ -152,11 +202,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         if sender.isSelected {
             self.player.numberOfLoops = -1
-            button4.layer.borderColor = UIColor.green.cgColor
             self.player?.play()
         } else {
-            button4.layer.borderColor = UIColor.gray.cgColor
             self.player?.pause()
+        }
+        
+        // player 가 재생 중이면, 다른 버튼 isSelected를 false로 변경
+        if self.player.isPlaying {
+            button1.isSelected = false
+            button2.isSelected = false
+            button3.isSelected = false
+            button5.isSelected = false
+            button6.isSelected = false
         }
     }
     
@@ -177,11 +234,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         if sender.isSelected {
             self.player.numberOfLoops = -1
-            button5.layer.borderColor = UIColor.purple.cgColor
             self.player?.play()
         } else {
-            button5.layer.borderColor = UIColor.gray.cgColor
             self.player?.pause()
+        }
+        
+        // player 가 재생 중이면, 다른 버튼 isSelected를 false로 변경
+        if self.player.isPlaying {
+            button1.isSelected = false
+            button2.isSelected = false
+            button3.isSelected = false
+            button4.isSelected = false
+            button6.isSelected = false
         }
     }
     
@@ -202,11 +266,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         if sender.isSelected {
             self.player.numberOfLoops = -1
-            button6.layer.borderColor = UIColor.cyan.cgColor
             self.player?.play()
         } else {
-            button6.layer.borderColor = UIColor.gray.cgColor
             self.player?.pause()
+        }
+        
+        // player 가 재생 중이면, 다른 버튼 isSelected를 false로 변경
+        if self.player.isPlaying {
+            button1.isSelected = false
+            button2.isSelected = false
+            button3.isSelected = false
+            button4.isSelected = false
+            button5.isSelected = false
         }
     }
     

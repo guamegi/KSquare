@@ -14,9 +14,14 @@ import AVFoundation
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // 쓰레드로 메인 뷰를 열 시간을 지연
+        Thread.sleep(forTimeInterval: 1.0)
+        
+        
         // background play
         let session = AVAudioSession.sharedInstance()
         do{
