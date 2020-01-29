@@ -219,9 +219,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="K Square" id="MsR-Pl-yXO">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="XyL-32-0FB"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="K Square" id="MsR-Pl-yXO"/>
                     <connections>
                         <outlet property="SubTitle1" destination="S0c-tm-d8Z" id="CU5-N0-ZWY"/>
                         <outlet property="SubTitle2" destination="F1W-28-lNl" id="8Ds-Zx-PMa"/>
@@ -258,6 +256,9 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90c-BR-Qa6">
                                 <rect key="frame" x="0.0" y="322" width="414" height="216"/>
                                 <locale key="locale" localeIdentifier="ko"/>
+                                <connections>
+                                    <action selector="changedPicker:" destination="Oij-di-YPx" eventType="valueChanged" id="oDv-Ja-cag"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpJ-yB-fQf">
                                 <rect key="frame" x="112" y="188" width="190" height="54"/>
@@ -271,9 +272,12 @@
                                     <constraint firstAttribute="width" constant="80" id="owD-tY-Bpt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Stop">
+                                <state key="normal" title="Reset">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetTimer:" destination="Oij-di-YPx" eventType="touchUpInside" id="Ba2-EK-yXN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPW-qQ-lAF">
                                 <rect key="frame" x="254" y="618" width="80" height="40"/>
@@ -282,6 +286,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopTimer:" destination="Oij-di-YPx" eventType="touchUpInside" id="ulS-MH-ceI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -299,6 +306,12 @@
                         <viewLayoutGuide key="safeArea" id="n2R-rm-Pb2"/>
                     </view>
                     <navigationItem key="navigationItem" title="Timer" id="D0p-yl-sAT"/>
+                    <connections>
+                        <outlet property="pickerView" destination="90c-BR-Qa6" id="1Tc-kU-KdN"/>
+                        <outlet property="resetBtn" destination="88N-yZ-UMD" id="02b-IV-eBn"/>
+                        <outlet property="startStopBtn" destination="FPW-qQ-lAF" id="CHe-Ab-tkC"/>
+                        <outlet property="timeLabel" destination="XpJ-yB-fQf" id="wBC-oF-xCd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5R-6j-bot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -363,7 +376,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="play" catalog="system" width="60" height="64"/>
         <image name="timer" catalog="system" width="64" height="60"/>
     </resources>

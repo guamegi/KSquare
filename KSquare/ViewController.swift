@@ -281,6 +281,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
+    // TODO : 헤드폰 연결 해제하면 재생 중지.
+    /*
+    참고 https://stackoverflow.com/questions/48926375/why-does-avaudioplayer-keep-playing-when-headphones-are-unplugged
+     */
+    
+    // TODO : 버튼 탭시 애니메이션. 원 동글뱅이
     
 }
 
